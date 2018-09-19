@@ -13,7 +13,6 @@
         <!--LoginVC-->
         <scene sceneID="Kct-WN-hAs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-xT-SY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="C43-6O-sBt" customClass="LoginVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VUe-7t-GjE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -23,28 +22,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="prm-Y2-Qin"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-xT-SY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162.5" y="165.8450704225352"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="ik8-gH-njE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hcb-4S-I4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SignupVC" id="ZEk-5r-fdE" customClass="SignupVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZEk-5r-fdE" customClass="SignupVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqI-L5-4kG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.68235294117647061" green="0.77647058823529413" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.77254901960784317" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bfJ-kj-CEZ"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcb-4S-I4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008" y="166"/>
+            <point key="canvasLocation" x="1897.5" y="165.8450704225352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YZE-BG-jhB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-Cz-sOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzc-zi-gNr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YgZ-BM-Fr0">
@@ -56,6 +55,7 @@
                         <segue destination="C43-6O-sBt" kind="relationship" relationship="rootViewController" id="RQT-ar-jLm"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-Cz-sOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="165" y="165.8450704225352"/>
         </scene>

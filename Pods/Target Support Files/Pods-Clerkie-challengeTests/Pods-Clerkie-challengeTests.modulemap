@@ -1,0 +1,6 @@
+framework module Pods_Clerkie_challengeTests {
+  umbrella header "Pods-Clerkie-challengeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

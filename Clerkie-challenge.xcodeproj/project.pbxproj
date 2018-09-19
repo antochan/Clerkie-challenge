@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38AAC03C2DA34F2514A8EF95 /* Pods_Clerkie_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */; };
+		3EB4061AF80D98989F22A54A /* Pods_Clerkie_challengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093EAB7C8EB8B5734F596C3 /* Pods_Clerkie_challengeUITests.framework */; };
+		8A94A728215231050048EA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A94A727215231050048EA9E /* Main.storyboard */; };
+		8A94A72C215231740048EA9E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94A72B215231740048EA9E /* LoginVC.swift */; };
+		8A94A72E215231CC0048EA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A94A72D215231CC0048EA9E /* GoogleService-Info.plist */; };
 		8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */; };
-		8A96B2C121522A5E002A65D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2C021522A5E002A65D2 /* ViewController.swift */; };
-		8A96B2C421522A5E002A65D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C221522A5E002A65D2 /* Main.storyboard */; };
 		8A96B2C621522A5F002A65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C521522A5F002A65D2 /* Assets.xcassets */; };
 		8A96B2C921522A5F002A65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */; };
 		8A96B2D421522A5F002A65D2 /* Clerkie_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2D321522A5F002A65D2 /* Clerkie_challengeTests.swift */; };
 		8A96B2DF21522A5F002A65D2 /* Clerkie_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */; };
+		8A96B2ED21522CE9002A65D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2EC21522CE8002A65D2 /* GoogleService-Info.plist */; };
+		AAD5626274C3F6E6664AC960 /* Pods_Clerkie_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +39,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36157E8C7544471D510E0E74 /* Pods-Clerkie-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		4093EAB7C8EB8B5734F596C3 /* Pods_Clerkie_challengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482DB9DF2EB5D49E84A8C1C2 /* Pods-Clerkie-challengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challengeTests/Pods-Clerkie-challengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D37E627AE64053A7F3CC081 /* Pods-Clerkie-challengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challengeTests/Pods-Clerkie-challengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6639B224F44C2832EE774746 /* Pods-Clerkie-challengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challengeUITests/Pods-Clerkie-challengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		721D5D58FF0525A79A2D6E5F /* Pods-Clerkie-challengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challengeUITests/Pods-Clerkie-challengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A94A727215231050048EA9E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8A94A72B215231740048EA9E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8A94A72D215231CC0048EA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A96B2BB21522A5E002A65D2 /* Clerkie-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clerkie-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A96B2C021522A5E002A65D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A96B2C321522A5E002A65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A96B2C521522A5F002A65D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A96B2C821522A5F002A65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A96B2CA21522A5F002A65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +60,9 @@
 		8A96B2DA21522A5F002A65D2 /* Clerkie-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clerkie-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clerkie_challengeUITests.swift; sourceTree = "<group>"; };
 		8A96B2E021522A60002A65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A96B2EC21522CE8002A65D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AAC03C2DA34F2514A8EF95 /* Pods_Clerkie_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD5626274C3F6E6664AC960 /* Pods_Clerkie_challengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +86,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB4061AF80D98989F22A54A /* Pods_Clerkie_challengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30DFFD9A8F7106863B0A345A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */,
+				7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */,
+				4093EAB7C8EB8B5734F596C3 /* Pods_Clerkie_challengeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A94A72221522F1E0048EA9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A94A72321522F230048EA9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A94A727215231050048EA9E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A94A72421522F270048EA9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8A94A72B215231740048EA9E /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8A96B2B221522A5E002A65D2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +133,8 @@
 				8A96B2D221522A5F002A65D2 /* Clerkie-challengeTests */,
 				8A96B2DD21522A5F002A65D2 /* Clerkie-challengeUITests */,
 				8A96B2BC21522A5E002A65D2 /* Products */,
+				9DA9A5F00FC85F22B27D6A3E /* Pods */,
+				30DFFD9A8F7106863B0A345A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +151,14 @@
 		8A96B2BD21522A5E002A65D2 /* Clerkie-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				8A94A72221522F1E0048EA9E /* Model */,
+				8A94A72321522F230048EA9E /* View */,
+				8A94A72421522F270048EA9E /* Controller */,
 				8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */,
-				8A96B2C021522A5E002A65D2 /* ViewController.swift */,
-				8A96B2C221522A5E002A65D2 /* Main.storyboard */,
 				8A96B2C521522A5F002A65D2 /* Assets.xcassets */,
 				8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */,
 				8A96B2CA21522A5F002A65D2 /* Info.plist */,
+				8A94A72D215231CC0048EA9E /* GoogleService-Info.plist */,
 			);
 			path = "Clerkie-challenge";
 			sourceTree = "<group>";
@@ -121,8 +177,22 @@
 			children = (
 				8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */,
 				8A96B2E021522A60002A65D2 /* Info.plist */,
+				8A96B2EC21522CE8002A65D2 /* GoogleService-Info.plist */,
 			);
 			path = "Clerkie-challengeUITests";
+			sourceTree = "<group>";
+		};
+		9DA9A5F00FC85F22B27D6A3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */,
+				36157E8C7544471D510E0E74 /* Pods-Clerkie-challenge.release.xcconfig */,
+				5D37E627AE64053A7F3CC081 /* Pods-Clerkie-challengeTests.debug.xcconfig */,
+				482DB9DF2EB5D49E84A8C1C2 /* Pods-Clerkie-challengeTests.release.xcconfig */,
+				721D5D58FF0525A79A2D6E5F /* Pods-Clerkie-challengeUITests.debug.xcconfig */,
+				6639B224F44C2832EE774746 /* Pods-Clerkie-challengeUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A96B2E321522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challenge" */;
 			buildPhases = (
+				0EE231ADE0187F29D2FE57B0 /* [CP] Check Pods Manifest.lock */,
 				8A96B2B721522A5E002A65D2 /* Sources */,
 				8A96B2B821522A5E002A65D2 /* Frameworks */,
 				8A96B2B921522A5E002A65D2 /* Resources */,
+				9AF9357E6E921D85FE399807 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A96B2E621522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeTests" */;
 			buildPhases = (
+				917C632DDD46BE1C51C43B29 /* [CP] Check Pods Manifest.lock */,
 				8A96B2CB21522A5F002A65D2 /* Sources */,
 				8A96B2CC21522A5F002A65D2 /* Frameworks */,
 				8A96B2CD21522A5F002A65D2 /* Resources */,
@@ -167,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A96B2E921522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeUITests" */;
 			buildPhases = (
+				8131EFD28149768A84B7DAB8 /* [CP] Check Pods Manifest.lock */,
 				8A96B2D621522A5F002A65D2 /* Sources */,
 				8A96B2D721522A5F002A65D2 /* Frameworks */,
 				8A96B2D821522A5F002A65D2 /* Resources */,
@@ -229,9 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A94A728215231050048EA9E /* Main.storyboard in Resources */,
+				8A94A72E215231CC0048EA9E /* GoogleService-Info.plist in Resources */,
 				8A96B2C921522A5F002A65D2 /* LaunchScreen.storyboard in Resources */,
 				8A96B2C621522A5F002A65D2 /* Assets.xcassets in Resources */,
-				8A96B2C421522A5E002A65D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,17 +321,99 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A96B2ED21522CE9002A65D2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EE231ADE0187F29D2FE57B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clerkie-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8131EFD28149768A84B7DAB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clerkie-challengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		917C632DDD46BE1C51C43B29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clerkie-challengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AF9357E6E921D85FE399807 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A96B2B721522A5E002A65D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A96B2C121522A5E002A65D2 /* ViewController.swift in Sources */,
+				8A94A72C215231740048EA9E /* LoginVC.swift in Sources */,
 				8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +450,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8A96B2C221522A5E002A65D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A96B2C321522A5E002A65D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,6 +577,7 @@
 		};
 		8A96B2E421522A60002A65D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +596,7 @@
 		};
 		8A96B2E521522A60002A65D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36157E8C7544471D510E0E74 /* Pods-Clerkie-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +615,7 @@
 		};
 		8A96B2E721522A60002A65D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D37E627AE64053A7F3CC081 /* Pods-Clerkie-challengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +637,7 @@
 		};
 		8A96B2E821522A60002A65D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482DB9DF2EB5D49E84A8C1C2 /* Pods-Clerkie-challengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +659,7 @@
 		};
 		8A96B2EA21522A60002A65D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721D5D58FF0525A79A2D6E5F /* Pods-Clerkie-challengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +680,7 @@
 		};
 		8A96B2EB21522A60002A65D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6639B224F44C2832EE774746 /* Pods-Clerkie-challengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

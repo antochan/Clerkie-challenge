@@ -11,6 +11,10 @@ pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'lottie-ios'
+pod 'IQKeyboardManager'
+pod 'TextFieldEffects'
+pod 'TransitionButton'
 
   target 'Clerkie-challengeTests' do
     inherit! :search_paths

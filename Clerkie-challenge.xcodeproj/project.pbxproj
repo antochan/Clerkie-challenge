@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */; };
+		8A96B2C121522A5E002A65D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2C021522A5E002A65D2 /* ViewController.swift */; };
+		8A96B2C421522A5E002A65D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C221522A5E002A65D2 /* Main.storyboard */; };
+		8A96B2C621522A5F002A65D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C521522A5F002A65D2 /* Assets.xcassets */; };
+		8A96B2C921522A5F002A65D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */; };
+		8A96B2D421522A5F002A65D2 /* Clerkie_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2D321522A5F002A65D2 /* Clerkie_challengeTests.swift */; };
+		8A96B2DF21522A5F002A65D2 /* Clerkie_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A96B2D021522A5F002A65D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A96B2B321522A5E002A65D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A96B2BA21522A5E002A65D2;
+			remoteInfo = "Clerkie-challenge";
+		};
+		8A96B2DB21522A5F002A65D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A96B2B321522A5E002A65D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A96B2BA21522A5E002A65D2;
+			remoteInfo = "Clerkie-challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A96B2BB21522A5E002A65D2 /* Clerkie-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clerkie-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A96B2C021522A5E002A65D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A96B2C321522A5E002A65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A96B2C521522A5F002A65D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A96B2C821522A5F002A65D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A96B2CA21522A5F002A65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A96B2CF21522A5F002A65D2 /* Clerkie-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clerkie-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A96B2D321522A5F002A65D2 /* Clerkie_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clerkie_challengeTests.swift; sourceTree = "<group>"; };
+		8A96B2D521522A5F002A65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A96B2DA21522A5F002A65D2 /* Clerkie-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clerkie-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clerkie_challengeUITests.swift; sourceTree = "<group>"; };
+		8A96B2E021522A60002A65D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A96B2B821522A5E002A65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2CC21522A5F002A65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2D721522A5F002A65D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A96B2B221522A5E002A65D2 = {
+			isa = PBXGroup;
+			children = (
+				8A96B2BD21522A5E002A65D2 /* Clerkie-challenge */,
+				8A96B2D221522A5F002A65D2 /* Clerkie-challengeTests */,
+				8A96B2DD21522A5F002A65D2 /* Clerkie-challengeUITests */,
+				8A96B2BC21522A5E002A65D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A96B2BC21522A5E002A65D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A96B2BB21522A5E002A65D2 /* Clerkie-challenge.app */,
+				8A96B2CF21522A5F002A65D2 /* Clerkie-challengeTests.xctest */,
+				8A96B2DA21522A5F002A65D2 /* Clerkie-challengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A96B2BD21522A5E002A65D2 /* Clerkie-challenge */ = {
+			isa = PBXGroup;
+			children = (
+				8A96B2BE21522A5E002A65D2 /* AppDelegate.swift */,
+				8A96B2C021522A5E002A65D2 /* ViewController.swift */,
+				8A96B2C221522A5E002A65D2 /* Main.storyboard */,
+				8A96B2C521522A5F002A65D2 /* Assets.xcassets */,
+				8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */,
+				8A96B2CA21522A5F002A65D2 /* Info.plist */,
+			);
+			path = "Clerkie-challenge";
+			sourceTree = "<group>";
+		};
+		8A96B2D221522A5F002A65D2 /* Clerkie-challengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A96B2D321522A5F002A65D2 /* Clerkie_challengeTests.swift */,
+				8A96B2D521522A5F002A65D2 /* Info.plist */,
+			);
+			path = "Clerkie-challengeTests";
+			sourceTree = "<group>";
+		};
+		8A96B2DD21522A5F002A65D2 /* Clerkie-challengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A96B2DE21522A5F002A65D2 /* Clerkie_challengeUITests.swift */,
+				8A96B2E021522A60002A65D2 /* Info.plist */,
+			);
+			path = "Clerkie-challengeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A96B2BA21522A5E002A65D2 /* Clerkie-challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A96B2E321522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challenge" */;
+			buildPhases = (
+				8A96B2B721522A5E002A65D2 /* Sources */,
+				8A96B2B821522A5E002A65D2 /* Frameworks */,
+				8A96B2B921522A5E002A65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Clerkie-challenge";
+			productName = "Clerkie-challenge";
+			productReference = 8A96B2BB21522A5E002A65D2 /* Clerkie-challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A96B2CE21522A5F002A65D2 /* Clerkie-challengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A96B2E621522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeTests" */;
+			buildPhases = (
+				8A96B2CB21522A5F002A65D2 /* Sources */,
+				8A96B2CC21522A5F002A65D2 /* Frameworks */,
+				8A96B2CD21522A5F002A65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A96B2D121522A5F002A65D2 /* PBXTargetDependency */,
+			);
+			name = "Clerkie-challengeTests";
+			productName = "Clerkie-challengeTests";
+			productReference = 8A96B2CF21522A5F002A65D2 /* Clerkie-challengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A96B2D921522A5F002A65D2 /* Clerkie-challengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A96B2E921522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeUITests" */;
+			buildPhases = (
+				8A96B2D621522A5F002A65D2 /* Sources */,
+				8A96B2D721522A5F002A65D2 /* Frameworks */,
+				8A96B2D821522A5F002A65D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A96B2DC21522A5F002A65D2 /* PBXTargetDependency */,
+			);
+			name = "Clerkie-challengeUITests";
+			productName = "Clerkie-challengeUITests";
+			productReference = 8A96B2DA21522A5F002A65D2 /* Clerkie-challengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A96B2B321522A5E002A65D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Antonio Chan";
+				TargetAttributes = {
+					8A96B2BA21522A5E002A65D2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					8A96B2CE21522A5F002A65D2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8A96B2BA21522A5E002A65D2;
+					};
+					8A96B2D921522A5F002A65D2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8A96B2BA21522A5E002A65D2;
+					};
+				};
+			};
+			buildConfigurationList = 8A96B2B621522A5E002A65D2 /* Build configuration list for PBXProject "Clerkie-challenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A96B2B221522A5E002A65D2;
+			productRefGroup = 8A96B2BC21522A5E002A65D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A96B2BA21522A5E002A65D2 /* Clerkie-challenge */,
+				8A96B2CE21522A5F002A65D2 /* Clerkie-challengeTests */,
+				8A96B2D921522A5F002A65D2 /* Clerkie-challengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A96B2B921522A5E002A65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A96B2C921522A5F002A65D2 /* LaunchScreen.storyboard in Resources */,
+				8A96B2C621522A5F002A65D2 /* Assets.xcassets in Resources */,
+				8A96B2C421522A5E002A65D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2CD21522A5F002A65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2D821522A5F002A65D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A96B2B721522A5E002A65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A96B2C121522A5E002A65D2 /* ViewController.swift in Sources */,
+				8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2CB21522A5F002A65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A96B2D421522A5F002A65D2 /* Clerkie_challengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A96B2D621522A5F002A65D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A96B2DF21522A5F002A65D2 /* Clerkie_challengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A96B2D121522A5F002A65D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A96B2BA21522A5E002A65D2 /* Clerkie-challenge */;
+			targetProxy = 8A96B2D021522A5F002A65D2 /* PBXContainerItemProxy */;
+		};
+		8A96B2DC21522A5F002A65D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A96B2BA21522A5E002A65D2 /* Clerkie-challenge */;
+			targetProxy = 8A96B2DB21522A5F002A65D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A96B2C221522A5E002A65D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A96B2C321522A5E002A65D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A96B2C721522A5F002A65D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A96B2C821522A5F002A65D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A96B2E121522A60002A65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A96B2E221522A60002A65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A96B2E421522A60002A65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A96B2E521522A60002A65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A96B2E721522A60002A65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clerkie-challenge.app/Clerkie-challenge";
+			};
+			name = Debug;
+		};
+		8A96B2E821522A60002A65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clerkie-challenge.app/Clerkie-challenge";
+			};
+			name = Release;
+		};
+		8A96B2EA21522A60002A65D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Clerkie-challenge";
+			};
+			name = Debug;
+		};
+		8A96B2EB21522A60002A65D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W444RWV5J8;
+				INFOPLIST_FILE = "Clerkie-challengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Clerkie-challengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Clerkie-challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A96B2B621522A5E002A65D2 /* Build configuration list for PBXProject "Clerkie-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A96B2E121522A60002A65D2 /* Debug */,
+				8A96B2E221522A60002A65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A96B2E321522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A96B2E421522A60002A65D2 /* Debug */,
+				8A96B2E521522A60002A65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A96B2E621522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A96B2E721522A60002A65D2 /* Debug */,
+				8A96B2E821522A60002A65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A96B2E921522A60002A65D2 /* Build configuration list for PBXNativeTarget "Clerkie-challengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A96B2EA21522A60002A65D2 /* Debug */,
+				8A96B2EB21522A60002A65D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A96B2B321522A5E002A65D2 /* Project object */;
+}

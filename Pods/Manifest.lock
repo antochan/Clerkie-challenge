@@ -1,4 +1,5 @@
 PODS:
+  - DynamicBlurView (2.0.2)
   - Firebase (5.5.0):
     - Firebase/Core (= 5.5.0)
   - Firebase/Auth (5.5.0):
@@ -66,6 +67,8 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PopupDialog (0.8.0):
+    - DynamicBlurView (~> 2.0)
   - TextFieldEffects (1.4.0)
   - TransitionButton (0.5.1)
 
@@ -76,11 +79,13 @@ DEPENDENCIES:
   - Firebase/Database
   - IQKeyboardManager
   - lottie-ios
+  - PopupDialog (~> 0.8)
   - TextFieldEffects
   - TransitionButton
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DynamicBlurView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -95,10 +100,12 @@ SPEC REPOS:
     - leveldb-library
     - lottie-ios
     - nanopb
+    - PopupDialog
     - TextFieldEffects
     - TransitionButton
 
 SPEC CHECKSUMS:
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   Firebase: 8c957f9cb3852b519180fb378801b7eeeba4d288
   FirebaseAnalytics: d4a260c114aec0d765ab5b9c404ac63de1d29381
   FirebaseAuth: 657a25e4be044d2d333663ebf515a861c5a59cd7
@@ -113,9 +120,10 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
 
-PODFILE CHECKSUM: c61a2b0aa5ec2f06536474c581ed331802b9fe11
+PODFILE CHECKSUM: aecd74f9f651cbecb73e40201b14578e29c93d13
 
 COCOAPODS: 1.5.3

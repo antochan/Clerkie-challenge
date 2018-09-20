@@ -26,21 +26,6 @@
             </objects>
             <point key="canvasLocation" x="1162.5" y="165.8450704225352"/>
         </scene>
-        <!--SignupVC-->
-        <scene sceneID="ik8-gH-njE">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hcb-4S-I4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SignupVC" id="ZEk-5r-fdE" customClass="SignupVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vqI-L5-4kG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.68235294117647061" green="0.77647058823529413" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bfJ-kj-CEZ"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2008" y="166"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YZE-BG-jhB">
             <objects>

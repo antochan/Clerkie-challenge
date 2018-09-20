@@ -10,6 +10,7 @@ import UIKit
 import Lottie
 import TextFieldEffects
 import TransitionButton
+import PopupDialog
 
 class LoginVC: UIViewController {
     
@@ -142,8 +143,33 @@ class LoginVC: UIViewController {
     }
     
     @objc func initiateSignupForm() {
-        let signupVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-        self.navigationController?.pushViewController(signupVC, animated: true)
+        // Create a custom view controller
+        let signupVC = SignupVC()
+        
+        // Create the dialog
+        let popup = PopupDialog(viewController: signupVC,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .bounceDown,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: false)
+        
+        
+        // Create first button
+        let buttonOne = CancelButton(title: "CANCEL", height: 60) {
+            print("You canceled the rating dialog")
+        }
+        
+        // Create second button
+        let buttonTwo = DefaultButton(title: "RATE", height: 60) {
+            print("swag")
+        }
+        
+        // Add buttons to dialog
+        popup.addButtons([buttonOne, buttonTwo])
+        
+        // Present dialog
+        present(popup, animated: true, completion: nil)
+        
     }
 
 }

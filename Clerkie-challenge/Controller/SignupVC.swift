@@ -1,22 +1,22 @@
 //
-//  SignupVC.swift
-//  Clerkie-challenge
+//  RatingViewController.swift
+//  PopupDialog
 //
-//  Created by Antonio Chan on 2018/9/19.
-//  Copyright © 2018 Antonio Chan. All rights reserved.
+//  Created by Martin Wildfeuer on 11.07.16.
+//  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
 import UIKit
+import TextFieldEffects
 
 class SignupVC: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var phoneEmailTextField: IsaoTextField!
+    @IBOutlet weak var passwordTextField: IsaoTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }
+

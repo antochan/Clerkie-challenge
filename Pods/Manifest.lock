@@ -79,7 +79,7 @@ DEPENDENCIES:
   - Firebase/Database
   - IQKeyboardManager
   - lottie-ios
-  - PopupDialog (~> 0.8)
+  - PopupDialog
   - TextFieldEffects
   - TransitionButton
 
@@ -124,6 +124,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
 
-PODFILE CHECKSUM: aecd74f9f651cbecb73e40201b14578e29c93d13
+PODFILE CHECKSUM: 212d6be319989eeddc9443837c6034121f1eff33
 
 COCOAPODS: 1.5.3

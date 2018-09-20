@@ -15,7 +15,7 @@ pod 'lottie-ios'
 pod 'IQKeyboardManager'
 pod 'TextFieldEffects'
 pod 'TransitionButton'
-pod 'PopupDialog', '~> 0.8'
+pod 'PopupDialog'
 
   target 'Clerkie-challengeTests' do
     inherit! :search_paths

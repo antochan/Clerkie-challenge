@@ -131,45 +131,71 @@ class LoginVC: UIViewController {
         guard let email = emailTextField.text , emailTextField.text != "" else { return }
         guard let password = passwordTextField.text , passwordTextField.text != "" else { return }
         button.startAnimation()
-        let qualityOfServiceClass = DispatchQoS.QoSClass.background
-        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-        backgroundQueue.async(execute: { [weak self] in
-            
-        guard let strongSelf = self else { return }
-            
-            //Do Auth Service calls here
-            
+   
+        AuthServices.instance.loginUserWithEmail(email: email, password: password, completion: { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    button.stopAnimation(animationStyle: .expand, completion: {
+                        self.performSegue(withIdentifier: "exitAuthSegue", sender: nil)
+                    })
+                }
+            } else {
+                DispatchQueue.main.async {
+                    button.stopAnimation(animationStyle: .shake, completion: nil)
+                }
+            }
         })
     }
     
     @objc func initiateSignupForm() {
+        showCustomDialog(animated: true)
+    }
+    
+    func showCustomDialog(animated: Bool = true) {
+        
         // Create a custom view controller
-        let signupVC = SignupVC()
+        let signupVC = SignupVC(nibName: "SignupVC", bundle: nil)
         
         // Create the dialog
         let popup = PopupDialog(viewController: signupVC,
                                 buttonAlignment: .horizontal,
-                                transitionStyle: .bounceDown,
-                                tapGestureDismissal: true,
+                                transitionStyle: .bounceUp,
+                                tapGestureDismissal: false,
                                 panGestureDismissal: false)
         
-        
         // Create first button
-        let buttonOne = CancelButton(title: "CANCEL", height: 60) {
-            print("You canceled the rating dialog")
+        let buttonOne = CancelButton(title: "CANCEL", height: 50) {
         }
         
         // Create second button
-        let buttonTwo = DefaultButton(title: "RATE", height: 60) {
-            print("swag")
+        let buttonTwo = DefaultButton(title: "SIGNUP", height: 50, dismissOnTap: false) {
+            
+            if signupVC.phoneEmailTextField.text == "" || signupVC.passwordTextField.text == "" {
+                popup.shake()
+            }
+            
+            guard let emailPhone = signupVC.phoneEmailTextField.text , signupVC.phoneEmailTextField.text != "" else { return }
+            guard let password = signupVC.passwordTextField.text , signupVC.passwordTextField.text != "" else { return }
+            
+            let sv = UIViewController.displaySpinner(onView: self.view)
+            AuthServices.instance.registerUserWithEmail(email: emailPhone, password: password, completion: { (success) in
+                if success {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "exitAuthSegue", sender: nil)
+                        popup.dismiss()
+                        UIViewController.removeSpinner(spinner: sv)
+                    }
+                } else {
+                    popup.shake()
+                }
+            })
         }
         
         // Add buttons to dialog
         popup.addButtons([buttonOne, buttonTwo])
         
         // Present dialog
-        present(popup, animated: true, completion: nil)
-        
+        present(popup, animated: animated, completion: nil)
     }
 
 }

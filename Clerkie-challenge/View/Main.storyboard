@@ -13,7 +13,6 @@
         <!--LoginVC-->
         <scene sceneID="Kct-WN-hAs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-xT-SY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="C43-6O-sBt" customClass="LoginVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VUe-7t-GjE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -22,14 +21,41 @@
                         <viewLayoutGuide key="safeArea" id="7E8-5F-uYc"/>
                     </view>
                     <navigationItem key="navigationItem" id="prm-Y2-Qin"/>
+                    <connections>
+                        <segue destination="O95-AC-Fcr" kind="show" identifier="exitAuthSegue" id="EQS-RA-Jf4"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-xT-SY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162.5" y="165.8450704225352"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="Yw1-gc-6Hw">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" id="O95-AC-Fcr" customClass="ChatVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hcg-zi-BNp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1a-OF-Yyx">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="x1R-64-Gpf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-TO-ntP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YZE-BG-jhB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-Cz-sOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzc-zi-gNr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YgZ-BM-Fr0">
@@ -41,6 +67,7 @@
                         <segue destination="C43-6O-sBt" kind="relationship" relationship="rootViewController" id="RQT-ar-jLm"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-Cz-sOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="165" y="165.8450704225352"/>
         </scene>

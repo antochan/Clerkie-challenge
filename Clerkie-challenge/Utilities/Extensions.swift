@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 extension UIFont {
     class func avenirBookFontOfSize(size: CGFloat) -> UIFont {
@@ -66,6 +67,56 @@ extension UIColor {
         
         struct Blue {
             static let PastelBlue = UIColor(hexString: "#aec6cf")
+        }
+    }
+}
+
+extension String {
+    var isPhoneNumber: Bool {
+        do {
+            let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+            let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, self.count))
+            if let res = matches.first {
+                return res.resultType == .phoneNumber && res.range.location == 0 && res.range.length == self.count
+            } else {
+                return false
+            }
+        } catch {
+            return false
+        }
+    }
+    
+    func isValidEmail() -> Bool {
+        // here, `try!` will always succeed because the pattern is valid
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+    }
+}
+
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.35)
+        
+        let animationView = LOTAnimationView(name: "Loader")
+        animationView.frame = CGRect(x:0, y: 0, width:60, height:60)
+        animationView.center = spinnerView.center
+        animationView.loopAnimation = true
+        animationView.contentMode = .scaleAspectFill
+        
+        animationView.play()
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(animationView)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
         }
     }
 }

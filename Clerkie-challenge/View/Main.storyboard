@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hzc-zi-gNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C43-6O-sBt">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,15 +21,12 @@
                         <viewLayoutGuide key="safeArea" id="7E8-5F-uYc"/>
                     </view>
                     <navigationItem key="navigationItem" id="prm-Y2-Qin"/>
-                    <connections>
-                        <segue destination="O95-AC-Fcr" kind="show" identifier="exitAuthSegue" id="EQS-RA-Jf4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NL-xT-SY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162.5" y="165.8450704225352"/>
         </scene>
-        <!--ChatVC-->
+        <!--Clerkie Bot!-->
         <scene sceneID="Yw1-gc-6Hw">
             <objects>
                 <viewController storyboardIdentifier="ChatVC" id="O95-AC-Fcr" customClass="ChatVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,39 +34,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1a-OF-Yyx">
-                                <rect key="frame" x="139" y="274" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2bV-4D-4TH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="O95-AC-Fcr" id="DSa-Lf-IWe"/>
+                                    <outlet property="delegate" destination="O95-AC-Fcr" id="Nq2-AC-noh"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Type Something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-kp-YMq">
+                                <rect key="frame" x="0.0" y="528" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wBm-bB-vB0"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-uw-nwc">
+                                <rect key="frame" x="288" y="528" width="24" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c5S-Ns-6E2"/>
+                                </constraints>
+                                <state key="normal" image="send-button"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="O95-AC-Fcr" eventType="touchUpInside" id="Y95-f1-YC3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1dt-uw-nwc" firstAttribute="leading" secondItem="1ve-kp-YMq" secondAttribute="trailing" id="35f-Wc-VEs"/>
+                            <constraint firstItem="1ve-kp-YMq" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="6vs-Xl-aea"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="Hgl-R1-qbp"/>
+                            <constraint firstItem="1ve-kp-YMq" firstAttribute="bottom" secondItem="x1R-64-Gpf" secondAttribute="bottom" id="OYo-2c-a39"/>
+                            <constraint firstItem="1ve-kp-YMq" firstAttribute="top" secondItem="2bV-4D-4TH" secondAttribute="bottom" id="b7T-qi-Me2"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="top" secondItem="hcg-zi-BNp" secondAttribute="top" constant="64" id="dVl-Yc-FeI"/>
+                            <constraint firstItem="1dt-uw-nwc" firstAttribute="bottom" secondItem="x1R-64-Gpf" secondAttribute="bottom" id="eTb-Em-A56"/>
+                            <constraint firstItem="1dt-uw-nwc" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" constant="-8" id="gVs-9e-Yff"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" id="lrG-2A-LuG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="x1R-64-Gpf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Clerkie Bot!" id="UOS-dg-62b">
+                        <barButtonItem key="leftBarButtonItem" image="logout" style="plain" id="go5-kA-4Mf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sH7-nr-0mX">
+                                <rect key="frame" x="16" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="logout"/>
+                            </button>
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="bar-chart" style="plain" id="rgx-Yq-pES">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yFB-5I-IEz">
+                                <rect key="frame" x="280" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="analytics"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatTableView" destination="2bV-4D-4TH" id="qgc-3v-K1A"/>
+                        <outlet property="messageTextField" destination="1ve-kp-YMq" id="J9u-5n-lkk"/>
+                        <outlet property="sendButton" destination="1dt-uw-nwc" id="DZe-IG-JW9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-TO-ntP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092" y="167"/>
+            <point key="canvasLocation" x="3088.125" y="166.90140845070422"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="YZE-BG-jhB">
+        <scene sceneID="s1q-RJ-I3W">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzc-zi-gNr" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="chatNav" automaticallyAdjustsScrollViewInsets="NO" id="afi-ij-7cm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YgZ-BM-Fr0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vR4-Z6-OiI">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.68235294120000001" green="0.77647058820000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="C43-6O-sBt" kind="relationship" relationship="rootViewController" id="RQT-ar-jLm"/>
+                        <segue destination="O95-AC-Fcr" kind="relationship" relationship="rootViewController" id="obs-FY-zYa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-Cz-sOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucp-lL-uoq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="165.8450704225352"/>
+            <point key="canvasLocation" x="2090.625" y="166.90140845070422"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="analytics" width="24" height="24"/>
+        <image name="bar-chart" width="24" height="24"/>
+        <image name="logout" width="24" height="24"/>
+        <image name="send-button" width="24" height="24"/>
+    </resources>
 </document>

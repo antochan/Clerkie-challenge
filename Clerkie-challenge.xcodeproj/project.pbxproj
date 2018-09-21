@@ -24,6 +24,10 @@
 		8AA16F6B21538ACF002A045C /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F6A21538ACF002A045C /* AuthServices.swift */; };
 		8AA16F6D21538FFE002A045C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F6C21538FFE002A045C /* Constants.swift */; };
 		8AA16F6F21539471002A045C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F6E21539471002A045C /* ChatVC.swift */; };
+		8AA16F772154DB3E002A045C /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F752154DB3E002A045C /* MessageTableViewCell.swift */; };
+		8AA16F782154DB3E002A045C /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA16F762154DB3E002A045C /* MessageTableViewCell.xib */; };
+		8AA16F7A2154E0A3002A045C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F792154E0A3002A045C /* Message.swift */; };
+		8AA16F7C2154EC81002A045C /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F7B2154EC81002A045C /* ChatServices.swift */; };
 		8AFC779E2152D5B60080B6F5 /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AFC779D2152D5B60080B6F5 /* Logo.json */; };
 		AAD5626274C3F6E6664AC960 /* Pods_Clerkie_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +78,10 @@
 		8AA16F6A21538ACF002A045C /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		8AA16F6C21538FFE002A045C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8AA16F6E21539471002A045C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		8AA16F752154DB3E002A045C /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		8AA16F762154DB3E002A045C /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		8AA16F792154E0A3002A045C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8AA16F7B2154EC81002A045C /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		8AFC779D2152D5B60080B6F5 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
 		97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +137,7 @@
 		8A94A72221522F1E0048EA9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8AA16F792154E0A3002A045C /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +145,7 @@
 		8A94A72321522F230048EA9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AA16F742154DB1C002A045C /* Custom Cell */,
 				8A94A727215231050048EA9E /* Main.storyboard */,
 				8AA16F66215384C1002A045C /* SignupVC.xib */,
 			);
@@ -223,8 +233,18 @@
 			isa = PBXGroup;
 			children = (
 				8AA16F6A21538ACF002A045C /* AuthServices.swift */,
+				8AA16F7B2154EC81002A045C /* ChatServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8AA16F742154DB1C002A045C /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AA16F752154DB3E002A045C /* MessageTableViewCell.swift */,
+				8AA16F762154DB3E002A045C /* MessageTableViewCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		9DA9A5F00FC85F22B27D6A3E /* Pods */ = {
@@ -353,6 +373,7 @@
 				8A96B2C921522A5F002A65D2 /* LaunchScreen.storyboard in Resources */,
 				8A96B2C621522A5F002A65D2 /* Assets.xcassets in Resources */,
 				8AA16F68215384C2002A045C /* SignupVC.xib in Resources */,
+				8AA16F782154DB3E002A045C /* MessageTableViewCell.xib in Resources */,
 				8AFC779E2152D5B60080B6F5 /* Logo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +498,10 @@
 				8AA16F67215384C2002A045C /* SignupVC.swift in Sources */,
 				8A94A72C215231740048EA9E /* LoginVC.swift in Sources */,
 				8A4AFA362152E1E500DCDA8E /* Extensions.swift in Sources */,
+				8AA16F772154DB3E002A045C /* MessageTableViewCell.swift in Sources */,
 				8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */,
+				8AA16F7C2154EC81002A045C /* ChatServices.swift in Sources */,
+				8AA16F7A2154E0A3002A045C /* Message.swift in Sources */,
 				8AA16F6D21538FFE002A045C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

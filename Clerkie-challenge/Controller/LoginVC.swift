@@ -21,7 +21,6 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
         logoAnimate()
         setUpEmailTextField()
         setUpPasswordTextField()
@@ -43,21 +42,6 @@ class LoginVC: UIViewController {
         }
     }
     
-    func setUpNavigationBar() {
-        
-        //clear navigation bar
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-        
-        //back button
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:.plain, target: nil, action: nil)
-        
-        navigationController?.navigationBar.isHidden = false
-        
-    }
     
     fileprivate func setUpEmailTextField() {
         // email textfield
@@ -70,6 +54,7 @@ class LoginVC: UIViewController {
         emailTextField.widthAnchor.constraint(equalToConstant: 280).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         emailTextField.font = UIFont.avenirNextRegularFontOfSize(size: 15)
+        emailTextField.textColor = .white
         emailTextField.inactiveColor = .white
         emailTextField.activeColor = UIColor.FlatColor.Yellow.PastelYellow
         emailTextField.placeholder = "Email / Phone"
@@ -86,6 +71,7 @@ class LoginVC: UIViewController {
         passwordTextField.widthAnchor.constraint(equalToConstant: 280).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         passwordTextField.font = UIFont.avenirNextRegularFontOfSize(size: 15)
+        passwordTextField.textColor = .white
         passwordTextField.inactiveColor = .white
         passwordTextField.activeColor = UIColor.FlatColor.Yellow.PastelYellow
         passwordTextField.placeholder = "Password"
@@ -136,7 +122,7 @@ class LoginVC: UIViewController {
             if success {
                 DispatchQueue.main.async {
                     button.stopAnimation(animationStyle: .expand, completion: {
-                        self.performSegue(withIdentifier: "exitAuthSegue", sender: nil)
+                        self.presentChatVC()
                     })
                 }
             } else {
@@ -181,7 +167,7 @@ class LoginVC: UIViewController {
             AuthServices.instance.registerUserWithEmail(email: emailPhone, password: password, completion: { (success) in
                 if success {
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "exitAuthSegue", sender: nil)
+                        self.presentChatVC()
                         popup.dismiss()
                         UIViewController.removeSpinner(spinner: sv)
                     }
@@ -196,6 +182,12 @@ class LoginVC: UIViewController {
         
         // Present dialog
         present(popup, animated: animated, completion: nil)
+    }
+    
+    func presentChatVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "chatNav")
+        self.present(controller, animated: true, completion: nil)
     }
 
 }

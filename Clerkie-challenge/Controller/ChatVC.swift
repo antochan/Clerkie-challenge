@@ -106,10 +106,27 @@ class ChatVC: UIViewController {
     }
     
     func clerkieBotMessage() {
-        ChatServices.instance.sendMessage(sender: "ClerkieBot", message: "I am Clerkie!", chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
+        ChatServices.instance.sendMessage(sender: "ClerkieBot", message: "I am Clerkie! Your very own financial chat bot aid. I'm smarter than most humans too so don't worry, I'll be of help :)", chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
             return
         }
     }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        do
+        {
+            try Auth.auth().signOut()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            self.present(controller, animated: true, completion: nil)
+        }
+        catch let error as NSError
+        {
+            print(error.localizedDescription)
+        }
+        
+
+    }
+    
     
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

@@ -29,12 +29,19 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-fb-kwO">
+                                <rect key="frame" x="8" y="4" width="241" height="60"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.68235294120000001" green="0.77647058820000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mhi-fb-kwO" secondAttribute="trailing" constant="8" id="Bfo-Ym-IrZ"/>
                             <constraint firstAttribute="trailing" secondItem="uEg-68-hiK" secondAttribute="trailing" constant="12" id="G6N-9C-oyN"/>
+                            <constraint firstItem="Mhi-fb-kwO" firstAttribute="top" secondItem="PPq-H0-9lW" secondAttribute="top" constant="4" id="K4W-So-f41"/>
                             <constraint firstAttribute="bottom" secondItem="uEg-68-hiK" secondAttribute="bottom" constant="8" id="Wyo-Oy-Qee"/>
                             <constraint firstItem="uEg-68-hiK" firstAttribute="top" secondItem="PPq-H0-9lW" secondAttribute="top" constant="8" id="bEv-EA-bJV"/>
+                            <constraint firstItem="Mhi-fb-kwO" firstAttribute="leading" secondItem="PPq-H0-9lW" secondAttribute="leading" constant="8" id="g6a-t8-vIr"/>
+                            <constraint firstAttribute="bottom" secondItem="Mhi-fb-kwO" secondAttribute="bottom" constant="4" id="gZR-HA-JNe"/>
                             <constraint firstItem="uEg-68-hiK" firstAttribute="leading" secondItem="PPq-H0-9lW" secondAttribute="leading" constant="12" id="xgG-Gs-S9q"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -52,6 +59,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageViewMessage" destination="Mhi-fb-kwO" id="wuL-EC-kNe"/>
                 <outlet property="leftConstraint" destination="ls0-5A-LOM" id="l83-CQ-fqt"/>
                 <outlet property="messageBubble" destination="PPq-H0-9lW" id="1PZ-HE-thN"/>
                 <outlet property="messageLabel" destination="uEg-68-hiK" id="yQK-cr-akY"/>

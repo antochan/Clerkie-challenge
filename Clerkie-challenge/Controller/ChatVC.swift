@@ -74,6 +74,7 @@ class ChatVC: UIViewController {
         let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 40))
         
         leftButton.setImage(#imageLiteral(resourceName: "photo-camera"), for: .normal)
+        leftButton.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
         rightButton.setImage(#imageLiteral(resourceName: "send-button"), for: .normal)
         rightButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
         
@@ -170,9 +171,17 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
    
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
-        cell.messageLabel.text = messages[indexPath.row].Message
         
-        if messages[indexPath.row].Sender != Auth.auth().currentUser?.email as String! {
+        //TODO better conditional for images
+//        if messages[indexPath.row].Message.count > 200 {
+//                cell.imageViewMessage.image = #imageLiteral(resourceName: "picture")
+//                cell.messageLabel.text = ""
+//        } else {
+            cell.messageLabel.text = messages[indexPath.row].Message
+//        }
+        
+        
+        if messages[indexPath.row].Sender != Auth.auth().currentUser?.email {
             cell.messageBubble.backgroundColor = UIColor.FlatColor.Yellow.PastelYellow
             cell.messageLabel.textColor = .black
             cell.leftConstraint.constant = 2
@@ -187,5 +196,33 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ChatVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc func selectImage() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+  
+        let imageData: Data? = UIImageJPEGRepresentation(image, 0.1)
+        let imageStr = imageData?.base64EncodedString(options: .lineLength64Characters) ?? ""
+        print(imageStr)
+        
+        ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: imageStr, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

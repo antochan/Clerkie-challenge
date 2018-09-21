@@ -16,6 +16,7 @@ pod 'IQKeyboardManager'
 pod 'TextFieldEffects'
 pod 'TransitionButton'
 pod 'PopupDialog'
+pod 'ALTextInputBar'
 
   target 'Clerkie-challengeTests' do
     inherit! :search_paths

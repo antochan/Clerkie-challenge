@@ -8,14 +8,34 @@
 
 import UIKit
 import Firebase
+import ALTextInputBar
 
 class ChatVC: UIViewController {
 
     @IBOutlet weak var chatTableView: UITableView!
-    @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var sendButton: UIButton!
     
     var messages : [Message] = [Message]()
+    
+    let textInputBar = ALTextInputBar()
+    let keyboardObserver = ALKeyboardObservingView()
+    
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        textInputBar.frame.size.width = view.bounds.size.width
+    }
+    
+    // This is how we attach the input bar to the keyboard
+    override var inputAccessoryView: UIView? {
+        get {
+            return keyboardObserver
+        }
+    }
+    
+    // Another ingredient in the magic sauce
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +48,7 @@ class ChatVC: UIViewController {
         self.chatTableView.backgroundView = bgView
         
         retrieveMessages()
+        configureInputBar()
     
     }
     
@@ -48,25 +69,38 @@ class ChatVC: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    func configureInputBar() {
+        let leftButton  = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 40))
+        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 40))
+        
+        leftButton.setImage(#imageLiteral(resourceName: "photo-camera"), for: .normal)
+        rightButton.setImage(#imageLiteral(resourceName: "send-button"), for: .normal)
+        rightButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        
+        keyboardObserver.isUserInteractionEnabled = false
+        
+        textInputBar.showTextViewBorder = true
+        textInputBar.leftView = leftButton
+        textInputBar.rightView = rightButton
+        textInputBar.frame = CGRect(x: 0, y: view.frame.size.height - textInputBar.defaultHeight, width: view.frame.size.width, height: textInputBar.defaultHeight)
+        textInputBar.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        
+        view.addSubview(textInputBar)
+    }
+    
     @IBAction func sendMessage(_ sender: Any) {
         
-        messageTextField.endEditing(true)
-        messageTextField.isEnabled = false
-        sendButton.isEnabled = false
+        textInputBar.endEditing(true)
         
-        ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: messageTextField.text!, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
+        ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: textInputBar.text!, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
 
             if success {
                 //function from Clerkie Bot
                 self.clerkieBotMessage()
-                self.messageTextField.text = ""
-                self.messageTextField.isEnabled = true
-                self.sendButton.isEnabled = true
+                self.textInputBar.text = ""
                 
             } else {
                 self.displayAlert(title: "An error occured!", message: "try sending message again later!")
-                self.messageTextField.isEnabled = true
-                self.sendButton.isEnabled = true
             }
         }
     }

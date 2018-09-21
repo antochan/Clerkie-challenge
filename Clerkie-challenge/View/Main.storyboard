@@ -43,37 +43,13 @@
                                     <outlet property="delegate" destination="O95-AC-Fcr" id="Nq2-AC-noh"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Type Something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-kp-YMq">
-                                <rect key="frame" x="0.0" y="528" width="288" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="wBm-bB-vB0"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-uw-nwc">
-                                <rect key="frame" x="288" y="528" width="24" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="c5S-Ns-6E2"/>
-                                </constraints>
-                                <state key="normal" image="send-button"/>
-                                <connections>
-                                    <action selector="sendMessage:" destination="O95-AC-Fcr" eventType="touchUpInside" id="Y95-f1-YC3"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1dt-uw-nwc" firstAttribute="leading" secondItem="1ve-kp-YMq" secondAttribute="trailing" id="35f-Wc-VEs"/>
-                            <constraint firstItem="1ve-kp-YMq" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="6vs-Xl-aea"/>
                             <constraint firstItem="2bV-4D-4TH" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="Hgl-R1-qbp"/>
-                            <constraint firstItem="1ve-kp-YMq" firstAttribute="bottom" secondItem="x1R-64-Gpf" secondAttribute="bottom" id="OYo-2c-a39"/>
-                            <constraint firstItem="1ve-kp-YMq" firstAttribute="top" secondItem="2bV-4D-4TH" secondAttribute="bottom" id="b7T-qi-Me2"/>
                             <constraint firstItem="2bV-4D-4TH" firstAttribute="top" secondItem="hcg-zi-BNp" secondAttribute="top" constant="64" id="dVl-Yc-FeI"/>
-                            <constraint firstItem="1dt-uw-nwc" firstAttribute="bottom" secondItem="x1R-64-Gpf" secondAttribute="bottom" id="eTb-Em-A56"/>
-                            <constraint firstItem="1dt-uw-nwc" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" constant="-8" id="gVs-9e-Yff"/>
                             <constraint firstItem="2bV-4D-4TH" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" id="lrG-2A-LuG"/>
+                            <constraint firstItem="x1R-64-Gpf" firstAttribute="bottom" secondItem="2bV-4D-4TH" secondAttribute="bottom" constant="40" id="n0f-O2-qkz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x1R-64-Gpf"/>
                     </view>
@@ -96,8 +72,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chatTableView" destination="2bV-4D-4TH" id="qgc-3v-K1A"/>
-                        <outlet property="messageTextField" destination="1ve-kp-YMq" id="J9u-5n-lkk"/>
-                        <outlet property="sendButton" destination="1dt-uw-nwc" id="DZe-IG-JW9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-TO-ntP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,6 +105,5 @@
         <image name="analytics" width="24" height="24"/>
         <image name="bar-chart" width="24" height="24"/>
         <image name="logout" width="24" height="24"/>
-        <image name="send-button" width="24" height="24"/>
     </resources>
 </document>

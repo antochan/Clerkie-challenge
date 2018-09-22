@@ -17,6 +17,7 @@ pod 'TextFieldEffects'
 pod 'TransitionButton'
 pod 'PopupDialog'
 pod 'ALTextInputBar'
+pod 'Firebase/Storage'
 
   target 'Clerkie-challengeTests' do
     inherit! :search_paths

@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2bV-4D-4TH">
-                                <rect key="frame" x="0.0" y="64" width="320" height="464"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -43,13 +43,73 @@
                                     <outlet property="delegate" destination="O95-AC-Fcr" id="Nq2-AC-noh"/>
                                 </connections>
                             </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-C4-jAf">
+                                <rect key="frame" x="0.0" y="483" width="320" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="a9P-f1-txp"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ilQ-om-P1x">
+                                    <size key="itemSize" width="156" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCollectionViewCell" id="hIx-1a-eeO" customClass="ButtonCollectionViewCell" customModule="Clerkie_challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2.5" width="156" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="156" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhS-7Z-9B7">
+                                                    <rect key="frame" x="5" y="4" width="146" height="32"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <state key="normal" title="Hello!">
+                                                        <color key="titleColor" red="0.68235294120000001" green="0.77647058820000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.68235294120000001" green="0.77647058820000003" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JhS-7Z-9B7" secondAttribute="bottom" constant="4" id="GMI-J1-LN1"/>
+                                            <constraint firstItem="JhS-7Z-9B7" firstAttribute="top" secondItem="hIx-1a-eeO" secondAttribute="top" constant="4" id="LKb-4U-UF5"/>
+                                            <constraint firstAttribute="trailing" secondItem="JhS-7Z-9B7" secondAttribute="trailing" constant="5" id="boX-37-n5t"/>
+                                            <constraint firstItem="JhS-7Z-9B7" firstAttribute="leading" secondItem="hIx-1a-eeO" secondAttribute="leading" constant="5" id="i8w-QO-a4M"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="smartChatButton" destination="JhS-7Z-9B7" id="bzv-HI-XKg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="O95-AC-Fcr" id="BOl-Vb-m8J"/>
+                                    <outlet property="delegate" destination="O95-AC-Fcr" id="fxb-0M-YQP"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2bV-4D-4TH" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="Hgl-R1-qbp"/>
-                            <constraint firstItem="2bV-4D-4TH" firstAttribute="top" secondItem="hcg-zi-BNp" secondAttribute="top" constant="64" id="dVl-Yc-FeI"/>
-                            <constraint firstItem="2bV-4D-4TH" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" id="lrG-2A-LuG"/>
-                            <constraint firstItem="x1R-64-Gpf" firstAttribute="bottom" secondItem="2bV-4D-4TH" secondAttribute="bottom" constant="40" id="n0f-O2-qkz"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="4PB-Fr-W5q"/>
+                            <constraint firstItem="Qfl-C4-jAf" firstAttribute="top" secondItem="2bV-4D-4TH" secondAttribute="bottom" id="BE3-Sv-nbo"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="top" secondItem="x1R-64-Gpf" secondAttribute="top" id="CEj-5n-eJ6"/>
+                            <constraint firstItem="Qfl-C4-jAf" firstAttribute="top" secondItem="2bV-4D-4TH" secondAttribute="bottom" id="Kvp-hD-do2"/>
+                            <constraint firstItem="Qfl-C4-jAf" firstAttribute="leading" secondItem="x1R-64-Gpf" secondAttribute="leading" id="TXT-ST-qDM"/>
+                            <constraint firstItem="Qfl-C4-jAf" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" id="bB7-Iq-1D3"/>
+                            <constraint firstItem="2bV-4D-4TH" firstAttribute="trailing" secondItem="x1R-64-Gpf" secondAttribute="trailing" id="hs0-vR-5pT"/>
+                            <constraint firstItem="x1R-64-Gpf" firstAttribute="bottom" secondItem="Qfl-C4-jAf" secondAttribute="bottom" constant="40" id="ts2-G6-Vr3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x1R-64-Gpf"/>
                     </view>
@@ -65,7 +125,7 @@
                             </button>
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="bar-chart" style="plain" id="rgx-Yq-pES">
+                        <barButtonItem key="rightBarButtonItem" image="analytics" style="plain" id="rgx-Yq-pES">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yFB-5I-IEz">
                                 <rect key="frame" x="280" y="10" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,7 +166,6 @@
     </scenes>
     <resources>
         <image name="analytics" width="24" height="24"/>
-        <image name="bar-chart" width="24" height="24"/>
         <image name="logout" width="24" height="24"/>
     </resources>
 </document>

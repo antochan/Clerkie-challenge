@@ -30,6 +30,7 @@
 		8AA16F7C2154EC81002A045C /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA16F7B2154EC81002A045C /* ChatServices.swift */; };
 		8AD01B912155F01D005E420D /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AD01B902155F01D005E420D /* Loader.json */; };
 		8AD01B932155F7A7005E420D /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD01B922155F7A7005E420D /* ButtonCollectionViewCell.swift */; };
+		8AD01B9721561B0D005E420D /* AnalyticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD01B9621561B0D005E420D /* AnalyticsVC.swift */; };
 		8AFC779E2152D5B60080B6F5 /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AFC779D2152D5B60080B6F5 /* Logo.json */; };
 		AAD5626274C3F6E6664AC960 /* Pods_Clerkie_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		8AA16F7B2154EC81002A045C /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		8AD01B902155F01D005E420D /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader.json; path = ../../../Downloads/Loader.json; sourceTree = "<group>"; };
 		8AD01B922155F7A7005E420D /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		8AD01B9621561B0D005E420D /* AnalyticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsVC.swift; sourceTree = "<group>"; };
 		8AFC779D2152D5B60080B6F5 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
 		97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				8A94A72B215231740048EA9E /* LoginVC.swift */,
 				8AA16F65215384C1002A045C /* SignupVC.swift */,
 				8AA16F6E21539471002A045C /* ChatVC.swift */,
+				8AD01B9621561B0D005E420D /* AnalyticsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				8A96B2BF21522A5E002A65D2 /* AppDelegate.swift in Sources */,
 				8AA16F7C2154EC81002A045C /* ChatServices.swift in Sources */,
 				8AA16F7A2154E0A3002A045C /* Message.swift in Sources */,
+				8AD01B9721561B0D005E420D /* AnalyticsVC.swift in Sources */,
 				8AA16F6D21538FFE002A045C /* Constants.swift in Sources */,
 				8AD01B932155F7A7005E420D /* ButtonCollectionViewCell.swift in Sources */,
 			);

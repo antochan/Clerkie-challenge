@@ -125,6 +125,9 @@
                                 <rect key="frame" x="280" y="10" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="analytics"/>
+                                <connections>
+                                    <action selector="analyticsDidTapped:" destination="O95-AC-Fcr" eventType="touchUpInside" id="HCF-lR-kvf"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -135,7 +138,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-TO-ntP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088.125" y="166.90140845070422"/>
+            <point key="canvasLocation" x="3071" y="167"/>
+        </scene>
+        <!--AnalyticsVC-->
+        <scene sceneID="5cZ-Ek-L97">
+            <objects>
+                <viewController storyboardIdentifier="AnalyticsVC" id="auK-a6-X8u" customClass="AnalyticsVC" customModule="Clerkie_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="60c-Rf-tzV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hhp-LO-bpe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cD1-0R-moj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3971" y="167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s1q-RJ-I3W">

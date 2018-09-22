@@ -72,7 +72,7 @@ class ChatVC: UIViewController {
     }
     
     func setUpNavigationBar() {
-        self.navigationController?.navigationBar.tintColor = UIColor.FlatColor.Blue.PastelBlue
+        self.navigationController?.navigationBar.tintColor = .white
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -199,6 +199,13 @@ class ChatVC: UIViewController {
         }
         return false
     }
+    
+    @IBAction func analyticsDidTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AnalyticsVC") as! AnalyticsVC
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
 
 }
 

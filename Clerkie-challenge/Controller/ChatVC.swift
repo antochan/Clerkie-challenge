@@ -14,10 +14,11 @@ import FirebaseStorage
 class ChatVC: UIViewController {
 
     @IBOutlet weak var chatTableView: UITableView!
+    @IBOutlet weak var quickChatCollectionView: UICollectionView!
     
     var messages : [Message] = [Message]()
     
-    var buttonTextArray = ["Hello!", "Spent", "Finincial Breakdown", "Daily Spending", "Weekly Spending", "Yearly Spending", "Annual Save", "Deposits"]
+    var buttonTextArray = ["Finincial Breakdown", "Daily Spending", "Weekly Spending", "Yearly Spending", "Annual Save", "Deposits"]
     
     let textInputBar = ALTextInputBar()
     let keyboardObserver = ALKeyboardObservingView()
@@ -52,6 +53,9 @@ class ChatVC: UIViewController {
         
         retrieveMessages()
         configureInputBar()
+        
+        quickChatCollectionView.delegate = self
+        quickChatCollectionView.dataSource = self
     
     }
     
@@ -115,8 +119,16 @@ class ChatVC: UIViewController {
             messageToSend = "Your current financial situation looks solid! You spent $200 this month and you you kept a good rate for saving $10,000 this year!"
         } else if userInputString.containsIgnoringCase(find: "Hello") {
             messageToSend = "Hey! Hope your doing well today!! Ask me anything, I am a smart financial advisor!"
-        } else if userInputString.containsIgnoringCase(find: "spent") {
-            messageToSend = "You spent $1,000 this month. This is over your budget. Be more responsible!!"
+        } else if userInputString.containsIgnoringCase(find: "Daily") {
+            messageToSend = "On average, your spending $45 per day. You are currently spending above your financial goals, try to spend less on entertainment!"
+        } else if userInputString.containsIgnoringCase(find: "Weekly") {
+            messageToSend = "On average, your spending $312.42 per day. You are currently spending above your financial goals, try to spend less on entertainment!"
+        } else if userInputString.containsIgnoringCase(find: "Yearly") {
+            messageToSend = "On average, your spending $34,021.52 per day. You are currently spending above your financial goals. 5% student loans, 24.2% housing, 12% entertainment, 16% food & essentials!"
+        } else if userInputString.containsIgnoringCase(find: "Save") {
+            messageToSend = "Your goal is to save at least 60 dollars a week at your currently income rate. You are over spending on entertainment and will only save $2 at this week"
+        } else if userInputString.containsIgnoringCase(find: "Deposit") {
+            messageToSend = "You recieved your last paycheck/deposit on March 3rd, 2018 3:22pm of $1,200 dollars. Keep making that MULA"
         } else {
             messageToSend = "I am Clerkie! Your very own financial chat bot aid. I'm smarter than most humans too so don't worry, I'll be of help :)"
         }
@@ -199,16 +211,9 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
    
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
         
-        //TODO: switch iamge viwes
-        
-        if verifyUrl(urlString: messages[indexPath.row].Message) {
-            cell.imageViewMessage.setImageFromURl(stringImageUrl: messages[indexPath.row].Message)
-            cell.messageLabel.text = ""
-            cell.messageBubble.isHidden = true
-        } else {
-           cell.messageLabel.text = messages[indexPath.row].Message
-           
-        }
+        //TODO: convert URL into image
+
+        cell.messageLabel.text = messages[indexPath.row].Message
         
         if messages[indexPath.row].Sender != Auth.auth().currentUser?.email {
             cell.messageBubble.backgroundColor = UIColor.FlatColor.Yellow.PastelYellow
@@ -223,6 +228,25 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         }
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canPerformAction action:
+        Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        if (action.description == "copy:") {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        if (action.description == "copy:") {
+            //...
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
 }
@@ -273,9 +297,23 @@ extension ChatVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.smartChatButton.setTitle(buttonTextArray[indexPath.row], for: .normal)
         
+        cell.smartChatButton.tag = indexPath.row
+        cell.smartChatButton.addTarget(self, action: #selector(quickChatTapped), for: .touchUpInside)
+        
         return cell
     }
     
+    @objc func quickChatTapped(sender : UIButton){
+        let message = buttonTextArray[sender.tag]
+
+        ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: message, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
+            if success {
+                self.clerkieBotMessage(userInputString: message)
+            } else {
+                print("error!")
+            }
+        }
+    }
     
     
 }

@@ -45,7 +45,6 @@ class ChatVC: UIViewController {
         super.viewDidLoad()
         
         setUpTableView()
-        setUpNavigationBar()
         
         let bgView = UIView()
         bgView.backgroundColor = UIColor.white
@@ -57,6 +56,10 @@ class ChatVC: UIViewController {
         quickChatCollectionView.delegate = self
         quickChatCollectionView.dataSource = self
     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavigationBar()
     }
     
     func setUpTableView() {
@@ -72,6 +75,7 @@ class ChatVC: UIViewController {
     }
     
     func setUpNavigationBar() {
+        navigationController?.navigationBar.barTintColor = UIColor.FlatColor.Blue.PastelBlue
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }

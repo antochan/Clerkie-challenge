@@ -68,6 +68,10 @@ extension UIColor {
         struct Blue {
             static let PastelBlue = UIColor(hexString: "#aec6cf")
         }
+        
+        struct Red {
+            static let PastelRed = UIColor(hexString: "#ff6961")
+        }
     }
 }
 

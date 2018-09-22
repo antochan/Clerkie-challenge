@@ -18,6 +18,7 @@ pod 'TransitionButton'
 pod 'PopupDialog'
 pod 'ALTextInputBar'
 pod 'Firebase/Storage'
+pod 'Charts'
 
   target 'Clerkie-challengeTests' do
     inherit! :search_paths

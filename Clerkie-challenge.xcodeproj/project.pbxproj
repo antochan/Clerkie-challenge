@@ -31,6 +31,7 @@
 		8AD01B912155F01D005E420D /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AD01B902155F01D005E420D /* Loader.json */; };
 		8AD01B932155F7A7005E420D /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD01B922155F7A7005E420D /* ButtonCollectionViewCell.swift */; };
 		8AD01B9721561B0D005E420D /* AnalyticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD01B9621561B0D005E420D /* AnalyticsVC.swift */; };
+		8AD01B992156339F005E420D /* PieChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD01B982156339F005E420D /* PieChartCollectionViewCell.swift */; };
 		8AFC779E2152D5B60080B6F5 /* Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AFC779D2152D5B60080B6F5 /* Logo.json */; };
 		AAD5626274C3F6E6664AC960 /* Pods_Clerkie_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2446342EFFCF4333E441E4 /* Pods_Clerkie_challengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		8AD01B902155F01D005E420D /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Loader.json; path = ../../../Downloads/Loader.json; sourceTree = "<group>"; };
 		8AD01B922155F7A7005E420D /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		8AD01B9621561B0D005E420D /* AnalyticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsVC.swift; sourceTree = "<group>"; };
+		8AD01B982156339F005E420D /* PieChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		8AFC779D2152D5B60080B6F5 /* Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Logo.json; sourceTree = "<group>"; };
 		97CC1A6826A5A55544C28827 /* Pods-Clerkie-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clerkie-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5F1A1C2DB48A8333A32CC1 /* Pods_Clerkie_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clerkie_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 				8AA16F752154DB3E002A045C /* MessageTableViewCell.swift */,
 				8AA16F762154DB3E002A045C /* MessageTableViewCell.xib */,
 				8AD01B922155F7A7005E420D /* ButtonCollectionViewCell.swift */,
+				8AD01B982156339F005E420D /* PieChartCollectionViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Clerkie-challenge/Pods-Clerkie-challenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALTextInputBar/ALTextInputBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -482,6 +486,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALTextInputBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -506,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA16F6B21538ACF002A045C /* AuthServices.swift in Sources */,
+				8AD01B992156339F005E420D /* PieChartCollectionViewCell.swift in Sources */,
 				8AA16F6F21539471002A045C /* ChatVC.swift in Sources */,
 				8AA16F67215384C2002A045C /* SignupVC.swift in Sources */,
 				8A94A72C215231740048EA9E /* LoginVC.swift in Sources */,

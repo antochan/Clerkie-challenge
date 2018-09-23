@@ -14,10 +14,18 @@ class AnalyticsVC: UIViewController {
     
     var monthArray = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
     
+    var colorsBase = [UIColor.FlatColor.Blue.PastelBlue, UIColor.FlatColor.Orange.PastelOrange, UIColor.FlatColor.Red.PastelRed, UIColor.FlatColor.Purple.PastelPurple]
 
+    
+    var titleLabel = ["Entertainment", "Food", "Rent", "Income"]
+    var numberAmount = [654, 231, 900, 1150]
+    
+    
     var numberOfDownloadsDataEntries = [PieChartDataEntry]()
     
     @IBOutlet weak var singleFilledLineChart: LineChartView!
+    
+    @IBOutlet weak var baseCollectionView: UICollectionView!
     
     private class CubicLineSampleFillFormatter: IFillFormatter {
         func getFillLinePosition(dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat {
@@ -102,33 +110,62 @@ class AnalyticsVC: UIViewController {
         singleFilledLineChart.legend.enabled = false
         singleFilledLineChart.chartDescription?.text = ""
     }
-
-
+    
 }
 
 extension AnalyticsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return monthArray.count
+        if collectionView == self.baseCollectionView {
+            return titleLabel.count
+        } else {
+           return monthArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PieChartCollectionViewCell", for: indexPath) as! PieChartCollectionViewCell
         
         
-        let chartDataSet = PieChartDataSet(values: numberOfDownloadsDataEntries, label: nil)
-        let chartData = PieChartData(dataSet: chartDataSet)
+        if collectionView == self.baseCollectionView {
+            
+            let cell: BaseInfoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BaseInfoCollectionViewCell", for: indexPath) as! BaseInfoCollectionViewCell
+            
+            cell.titleLabel.text = titleLabel[indexPath.row]
+            
+            let duration: Double = 2.0 //seconds
+            DispatchQueue.global().async {
+                for i in 0 ..< (self.numberAmount[indexPath.row] + 1) {
+                    let sleepTime = UInt32(duration/Double(self.numberAmount[indexPath.row]) * 1000000.0)
+                    usleep(sleepTime)
+                    DispatchQueue.main.async {
+                        cell.amountLabel.text = "$\(i)"
+                    }
+                }
+            }
+            cell.baseCellView.backgroundColor = colorsBase[indexPath.row]
+            
+            
+            return cell
+        } else {
+            let cell: PieChartCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PieChartCollectionViewCell", for: indexPath) as! PieChartCollectionViewCell
+            
+            
+            let chartDataSet = PieChartDataSet(values: numberOfDownloadsDataEntries, label: nil)
+            let chartData = PieChartData(dataSet: chartDataSet)
+            
+            let colors = [UIColor.FlatColor.Blue.PastelBlue, UIColor.FlatColor.Orange.PastelOrange, UIColor.FlatColor.Red.PastelRed]
+            chartDataSet.colors = colors
+            
+            self.randomPieChart()
+            cell.PieChartView.data = chartData
+            cell.PieChartView.chartDescription?.text = monthArray[indexPath.row]
+            cell.PieChartView.legend.enabled = false
+            cell.PieChartView.holeRadiusPercent = 0.5
+            
+            return cell
+        }
         
-        let colors = [UIColor.FlatColor.Blue.PastelBlue, UIColor.FlatColor.Yellow.PastelYellow, UIColor.FlatColor.Red.PastelRed]
-        chartDataSet.colors = colors
         
-        self.randomPieChart()
-        cell.PieChartView.data = chartData
-        cell.PieChartView.chartDescription?.text = monthArray[indexPath.row]
-        cell.PieChartView.legend.enabled = false
-        cell.PieChartView.holeRadiusPercent = 0.8
-        
-        return cell
     }
     
 }

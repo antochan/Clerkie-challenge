@@ -72,6 +72,14 @@ extension UIColor {
         struct Red {
             static let PastelRed = UIColor(hexString: "#ff6961")
         }
+        
+        struct Orange {
+            static let PastelOrange = UIColor(hexString: "#ffb347")
+        }
+        
+        struct Purple {
+            static let PastelPurple = UIColor(hexString: "#b19cd9")
+        }
     }
 }
 

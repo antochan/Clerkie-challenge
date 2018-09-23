@@ -107,9 +107,15 @@ class ChatVC: UIViewController {
         ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: textInputBar.text!, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
 
             if success {
+                self.textInputBar.isUserInteractionEnabled = false
+                self.quickChatCollectionView.isUserInteractionEnabled = false
                 //function from Clerkie Bot
-                self.clerkieBotMessage(userInputString: self.textInputBar.text)
-                self.textInputBar.text = ""
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                    self.clerkieBotMessage(userInputString: self.textInputBar.text)
+                    self.textInputBar.text = ""
+                    self.textInputBar.isUserInteractionEnabled = true
+                    self.quickChatCollectionView.isUserInteractionEnabled = true
+                })
                 
             } else {
                 self.displayAlert(title: "An error occured!", message: "try sending message again later!")
@@ -224,7 +230,8 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         //TODO: convert URL into image
 
-        cell.messageLabel.text = messages[indexPath.row].Message
+        cell.messageLabel.text = self.messages[indexPath.row].Message
+        
         
         if messages[indexPath.row].Sender != Auth.auth().currentUser?.email {
             cell.messageBubble.backgroundColor = UIColor.FlatColor.Yellow.PastelYellow
@@ -258,6 +265,19 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        var frame = cell.contentView.frame
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+            frame.origin.y = -10
+            cell.contentView.frame = frame
+        }) { (success) in
+            frame.origin.y = 0
+            cell.contentView.frame = frame
+        }
+        
     }
     
 }
@@ -319,7 +339,14 @@ extension ChatVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
         ChatServices.instance.sendMessage(sender: (Auth.auth().currentUser?.email)!, message: message, chatRoom: (Auth.auth().currentUser?.uid)!) { (success) in
             if success {
-                self.clerkieBotMessage(userInputString: message)
+                self.textInputBar.isUserInteractionEnabled = false
+                self.quickChatCollectionView.isUserInteractionEnabled = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                    self.clerkieBotMessage(userInputString: message)
+                    self.textInputBar.isUserInteractionEnabled = true
+                    self.quickChatCollectionView.allowsSelection = false
+                })
+                
             } else {
                 print("error!")
             }

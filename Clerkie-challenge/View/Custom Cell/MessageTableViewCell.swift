@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class MessageTableViewCell: UITableViewCell {
     
@@ -15,6 +16,7 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var leftConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewMessage: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

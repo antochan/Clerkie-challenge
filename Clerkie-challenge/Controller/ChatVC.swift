@@ -55,7 +55,6 @@ class ChatVC: UIViewController {
         
         quickChatCollectionView.delegate = self
         quickChatCollectionView.dataSource = self
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -344,7 +343,7 @@ extension ChatVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                     self.clerkieBotMessage(userInputString: message)
                     self.textInputBar.isUserInteractionEnabled = true
-                    self.quickChatCollectionView.allowsSelection = false
+                    self.quickChatCollectionView.isUserInteractionEnabled = true
                 })
                 
             } else {

@@ -28,6 +28,10 @@ class LoginVC: UIViewController {
         setUpSignupButton()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func logoAnimate() {
         let animationView = LOTAnimationView(name: "Logo")
         animationView.contentMode = .scaleAspectFill

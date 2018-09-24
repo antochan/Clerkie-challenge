@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         cb.buttonColor    = UIColor(red:0.25, green:0.25, blue:0.29, alpha:1.00)
         cb.separatorColor = UIColor(red:0.20, green:0.20, blue:0.25, alpha:1.00)
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.isStatusBarHidden = true
         
         return true
     }

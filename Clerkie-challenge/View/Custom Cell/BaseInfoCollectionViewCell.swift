@@ -13,4 +13,6 @@ class BaseInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var baseCellView: UIView!
+    
 }
+

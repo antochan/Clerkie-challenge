@@ -15,6 +15,7 @@ class ChatVC: UIViewController {
 
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var quickChatCollectionView: UICollectionView!
+    @IBOutlet weak var chatTopView: UIView!
     
     var messages : [Message] = [Message]()
     
@@ -55,10 +56,8 @@ class ChatVC: UIViewController {
         
         quickChatCollectionView.delegate = self
         quickChatCollectionView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setUpNavigationBar()
+        
+        chatTopView.dropShadow()
     }
     
     func setUpTableView() {
@@ -73,23 +72,16 @@ class ChatVC: UIViewController {
         chatTableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
     }
     
-    func setUpNavigationBar() {
-        navigationController?.navigationBar.barTintColor = UIColor.FlatColor.Blue.PastelBlue
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
-    
     func configureInputBar() {
         let leftButton  = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 40))
         let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 40))
         
-        leftButton.setImage(#imageLiteral(resourceName: "photo-camera"), for: .normal)
+        leftButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
         leftButton.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
-        rightButton.setImage(#imageLiteral(resourceName: "send-button"), for: .normal)
+        rightButton.setImage(#imageLiteral(resourceName: "send"), for: .normal)
         rightButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
         
         keyboardObserver.isUserInteractionEnabled = false
-        
         textInputBar.showTextViewBorder = true
         textInputBar.leftView = leftButton
         textInputBar.rightView = rightButton
@@ -176,7 +168,6 @@ class ChatVC: UIViewController {
     func retrieveMessages() {
         let messageDB = Database.database().reference().child((Auth.auth().currentUser?.uid)!)
         messageDB.observe(.childAdded) { (snapshot) in
-            let sv = UIViewController.displaySpinner(onView: self.view)
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             let text = snapshotValue["Message"]!
             let sender = snapshotValue["Sender"]!
@@ -188,7 +179,6 @@ class ChatVC: UIViewController {
             self.messages.append(message)
             DispatchQueue.main.async {
                 self.chatTableView.reloadData()
-                UIViewController.removeSpinner(spinner: sv)
                 
                 if self.messages.count != 0 {
                     self.chatTableView.scrollToRow(at: IndexPath(item:self.messages.count-1, section: 0), at: .bottom, animated: false)
@@ -212,7 +202,7 @@ class ChatVC: UIViewController {
     @IBAction func analyticsDidTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AnalyticsVC") as! AnalyticsVC
-        navigationController?.pushViewController(vc,animated: true)
+        present(vc, animated: true, completion: nil)
     }
     
 
@@ -233,12 +223,12 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         
         if messages[indexPath.row].Sender != Auth.auth().currentUser?.email {
-            cell.messageBubble.backgroundColor = UIColor.FlatColor.Yellow.PastelYellow
+            cell.messageBubble.backgroundColor = UIColor.FlatColor.Gray.WhiteSmoke
             cell.messageLabel.textColor = .black
             cell.leftConstraint.constant = 2
             cell.rightConstraint.constant = -60
         } else {
-            cell.messageBubble.backgroundColor = UIColor.FlatColor.Blue.PastelBlue
+            cell.messageBubble.backgroundColor = UIColor.FlatColor.Blue.NavyBlue
             cell.messageLabel.textColor = .white
             cell.leftConstraint.constant = 68
             cell.rightConstraint.constant = 2

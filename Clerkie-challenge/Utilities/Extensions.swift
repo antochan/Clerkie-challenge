@@ -67,10 +67,13 @@ extension UIColor {
         
         struct Blue {
             static let PastelBlue = UIColor(hexString: "#aec6cf")
+            static let NavyBlue = UIColor(hexString: "#0b1f45")
+            static let AquaBlue = UIColor(hexString: "#00d3e0")
         }
         
         struct Red {
             static let PastelRed = UIColor(hexString: "#ff6961")
+            static let HotPink = UIColor(hexString: "#e72c63")
         }
         
         struct Orange {
@@ -79,6 +82,11 @@ extension UIColor {
         
         struct Purple {
             static let PastelPurple = UIColor(hexString: "#b19cd9")
+            static let NeonPurple = UIColor(hexString: "#a260ff")
+        }
+        
+        struct Green {
+            static let NeonGreen = UIColor(hexString: "#00ffa8")
         }
     }
 }
@@ -179,5 +187,23 @@ extension UIImageView{
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
         }
+    }
+}
+
+extension UIView {
+    
+    func dropShadow() {
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.layer.shadowRadius = 4
+        
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shouldRasterize = true
+        
+        self.layer.rasterizationScale = UIScreen.main.scale
+        
     }
 }

@@ -111,7 +111,7 @@ class LoginVC: UIViewController {
         signupButton.titleLabel?.font = UIFont.avenirNextDemiBoldFontOfSize(size: 15)
         signupButton.backgroundColor = .white
         signupButton.setTitle("Signup", for: .normal)
-        signupButton.setTitleColor(UIColor.FlatColor.Blue.PastelBlue, for: .normal)
+        signupButton.setTitleColor(UIColor.FlatColor.Blue.NavyBlue, for: .normal)
         signupButton.layer.cornerRadius = 20
         signupButton.addTarget(self, action: #selector(initiateSignupForm), for: .touchUpInside)
     }
@@ -171,12 +171,13 @@ class LoginVC: UIViewController {
             AuthServices.instance.registerUserWithEmail(email: emailPhone, password: password, completion: { (success) in
                 if success {
                     DispatchQueue.main.async {
-                        self.presentChatVC()
                         popup.dismiss()
                         UIViewController.removeSpinner(spinner: sv)
+                        self.presentChatVC()
                     }
                 } else {
                     popup.shake()
+                    UIViewController.removeSpinner(spinner: sv)
                 }
             })
         }
@@ -190,7 +191,7 @@ class LoginVC: UIViewController {
     
     func presentChatVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "chatNav")
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChatVC")
         self.present(controller, animated: true, completion: nil)
     }
 
